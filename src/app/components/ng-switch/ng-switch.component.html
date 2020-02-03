@@ -1,0 +1,31 @@
+<span [ngSwitch]="alerta">
+    <div *ngSwitchCase="'success'">
+        success
+    </div>
+    <div *ngSwitchCase="'info'">
+        info
+    </div>
+    <div *ngSwitchCase="'warning'">
+        warning
+    </div>
+    <div *ngSwitchDefault>
+        danger
+    </div>
+</span>
+
+<button type="button" class="btn btn-light" (click)="changeColor()">{{colors[acum]}}</button>
+
+<div [ngSwitch]="alerta">
+    <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+        <strong>success</strong>
+    </div>
+    <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+        <strong>info</strong>
+    </div>
+    <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+        <strong>warning</strong>
+    </div>
+    <div *ngSwitchDefault class="alert alert-danger" role="alert">
+        <strong>danger</strong>
+    </div>
+</div>
